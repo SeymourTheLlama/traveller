@@ -4,10 +4,12 @@ var biomes = [
     possible_names: ["the Sahara", "the Hot Place"]
   },
   {
-    type: "plains"
+    type: "plains",
+    possible_names: ["faction_name Fields", "Fields of Thunder"]
   },
   {
-    type: "hilly"
+    type: "hilly",
+    possible_names: ["the Red Hills", "The Far-Off Hilly Place"]
   }
 ];
 
@@ -21,6 +23,7 @@ var locations = [
     type: "city",
     possible_names: ["Boston", "Taris", "Aes Sedai", "Elvisville"],
     incompatible_biomes: ["glacier"]
+    biome_location: 1
   },
   {
     type: "river",
@@ -31,5 +34,16 @@ var locations = [
     type: "capital_city",
     possible_names: ["name_of_nation City", "Bacon City", "Smile City"],
     compatible_biomes: ["hilly", "plains", "grasslands"]
+    biome_location: 1
   }
+];
+
+var events = [
+  {
+    name: "save_cat"
+    type: "tangent"
+    intro: "A friendly looking farmer walks up to you as you are passing along. 'Excuse me, good sir!' he cries. 'My cat cat_name got scared into the tree by the neighbors' llama. Do you think you could get cat_gender_direct_object down for me?"
+    intro_choice: ["Absolutely!", "No way!"]
+  }
+  
 ];
