@@ -38,12 +38,20 @@ var locations = [
   }
 ];
 
-var events = [
+var location_events = [
   {
-    name: "save_cat"
-    type: "tangent"
-    intro: "A friendly looking farmer walks up to you as you are passing along. 'Excuse me, good sir!' he cries. 'My cat cat_name got scared into the tree by the neighbors' llama. Do you think you could get cat_gender_direct_object down for me?"
-    intro_choice: ["Absolutely!", "No way!"]
+    name: "save_cat",
+    type: "location",
+    intro: "A friendly looking farmer walks up to you as you are passing along. 'Excuse me, good sir!' he cries. 'My cat cat_name got scared into the tree by the neighbors' llama. Do you think you could get cat_gender_direct_object down for me?",
+    intro_choice: ["Absolutely!", "No way!"],
+    compatible_biomes: ["farmland", "rural"]
+  },
+  {
+    name: "have_dinner_nice",
+    type: "location",
+    prereq_attributes: ["hunger" > 2, "food" < 0]
+    compatible_biomes: ["urban", "rural", "farmland"]
+    intro: "Running out of food. Looks like a nearby house might be able to feed you. Should you check?"
   }
   
 ];
